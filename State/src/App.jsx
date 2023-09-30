@@ -1,15 +1,15 @@
+import { useState } from "react";
 import "./App.css";
-import React, { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [value, setValue] = useState(0);
   const handleClick = () => {
-    setCount(count + 1);
+    setValue(value + 1);
   };
   return (
     <div>
-      <div>Course Counter: {count}</div>
-      <button onClick={handleClick}>Add Button</button>
+      <button onClick={handleClick}>Kurs Ekle</button>
+      <div>Kurs Sayisi: {value}</div>
     </div>
   );
 }

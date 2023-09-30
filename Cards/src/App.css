@@ -2,8 +2,8 @@
     height: 150px;
 }
 
-.card-content {
-    padding-top: 0px;
+.image.is-4by3 {
+    padding-top: 150px;
 }
 
 .card .media:not(:last-child) {

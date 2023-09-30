@@ -3,17 +3,17 @@ import Angular from "./assets/images/angular.jpg";
 import Bootstrap from "./assets/images/bootstrap5.png";
 import Ccsharp from "./assets/images/ccsharp.png";
 import KompleWeb from "./assets/images/kompleweb.jpg";
-const courseMap = {
-  Angular: Angular,
-  Bootstrap: Bootstrap,
-  Ccsharp: Ccsharp,
-  KompleWeb: KompleWeb,
-};
+import "./App.css";
 function Course({ courseName }) {
-  console.log(courseMap[courseName]);
+  const courseMap = {
+    Angular,
+    Bootstrap,
+    Ccsharp,
+    KompleWeb,
+  };
   return (
-    <div>
-      <img src={courseMap[courseName]} alt="" />
+    <div className="courseDiv">
+      <img className="course" src={courseMap[courseName]} alt="" />
     </div>
   );
 }
