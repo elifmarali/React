@@ -4,8 +4,8 @@
 
 .searchDiv {
   border: 1px solid lightgray;
-  padding: 10px;
   border-radius: 5px;
+  padding: 10px;
 }
 
 .searchDiv form {
@@ -14,12 +14,12 @@
   gap: 2px;
 }
 
-.imagesDiv {
+.imageContainer {
   columns: 250px 5;
   column-gap: 10px;
 }
 
-.imageElement {
+.imageItem {
   width: 100%;
   margin-bottom: 10px;
 }
