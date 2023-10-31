@@ -1,0 +1,13 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    padding: 19px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    box-shadow: 1px 1px lightgray;
+    margin: 10px 0;
+}
