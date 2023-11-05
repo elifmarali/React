@@ -1,35 +1,51 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import { useState } from "react";
+import "./App.css";
+import TaskCreate from "./components/TaskCreate";
+import TasksList from "./components/TasksList";
+import TaskItem from "./components/TaskItem";
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [tasksList, setTasksList] = useState([]);
+  const taskSubmitted = (title, description) => {
+    addTaskToList(title, description);
+  };
+  const addTaskToList = (title, description) => {
+    const tasks = [
+      ...tasksList,
+      {
+        id: Math.round(Math.random() * 999999999),
+        title,
+        description,
+      },
+    ];
+    setTasksList(tasks);
+  };
+  const deleteTaskById = (id) => {
+    const afterDeletingTasks = tasksList.filter((task) => {
+      return task.id !== id;
+    });
+    setTasksList(afterDeletingTasks);
+  };
+  const editTaskById = (id, updatedTitle, updatedDescription) => {
+    const updatedTasks = tasksList.map((task) => {
+      if (id === task.id) {
+        task.title = updatedTitle;
+        task.description = updatedDescription;
+      }
+      return task;
+    });
+    setTasksList(updatedTasks);
+  };
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="App">
+      <TaskCreate task={taskSubmitted} />
+      <h1>Gorevler</h1>
+      <TasksList
+        tasks={tasksList}
+        onDelete={deleteTaskById}
+        onUpdate={editTaskById}
+      />
+    </div>
+  );
 }
 
-export default App
+export default App;
