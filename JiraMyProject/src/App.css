@@ -13,6 +13,10 @@ body {
   width: 450px;
 }
 
+.updateContainer {
+  width: 100%;
+}
+
 .createForm {
   display: flex;
   flex-direction: column;
@@ -36,10 +40,22 @@ body {
   transition: 500ms all;
 }
 
+.updateFormButton {
+  background-color: #eca54f;
+  border: 2px solid #eca54f;
+}
+
 .createButton:hover {
   background-color: #1F1717;
   color: #CE5A67;
 }
+
+.updateFormButton:hover {
+  background-color: #CE5A67;
+  border: 2px solid #CE5A67;
+  color: #F5F7F8;
+}
+
 
 .taskListContainer {
   display: flex;
