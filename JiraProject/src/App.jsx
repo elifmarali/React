@@ -1,31 +1,38 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import TaskCreate from "./components/TaskCreate";
 import TasksList from "./components/TasksList";
-import TaskItem from "./components/TaskItem";
+import axios from "axios";
 function App() {
   const [tasksList, setTasksList] = useState([]);
-  const taskSubmitted = (title, description) => {
-    addTaskToList(title, description);
+  useEffect(() => {
+    fetchTasks();
+  }, []);
+  const fetchTasks = async () => {
+    const response = await axios.get("http://localhost:3000/tasksList");
+    setTasksList(response.data);
   };
-  const addTaskToList = (title, description) => {
-    const tasks = [
-      ...tasksList,
-      {
-        id: Math.round(Math.random() * 999999999),
-        title,
-        description,
-      },
-    ];
+  const addTaskToList = async (title, description) => {
+    const response = await axios.post("http://localhost:3000/tasksList", {
+      title,
+      description,
+    });
+    const tasks = [...tasksList, response.data];
     setTasksList(tasks);
   };
-  const deleteTaskById = (id) => {
+
+  const deleteTaskById = async (id) => {
+    await axios.delete(`http://localhost:3000/tasksList/${id}`);
     const afterDeletingTasks = tasksList.filter((task) => {
       return task.id !== id;
     });
     setTasksList(afterDeletingTasks);
   };
-  const editTaskById = (id, updatedTitle, updatedDescription) => {
+  const editTaskById = async (id, updatedTitle, updatedDescription) => {
+    await axios.put(`http://localhost:3000/tasksList/${id}`, {
+      title: updatedTitle,
+      description: updatedDescription,
+    });
     const updatedTasks = tasksList.map((task) => {
       if (id === task.id) {
         task.title = updatedTitle;
@@ -37,7 +44,7 @@ function App() {
   };
   return (
     <div className="App">
-      <TaskCreate task={taskSubmitted} />
+      <TaskCreate task={addTaskToList} />
       <h1>Gorevler</h1>
       <TasksList
         tasks={tasksList}
