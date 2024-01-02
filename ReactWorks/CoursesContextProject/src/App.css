@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,300&display=swap');
+
+:root {
+    --dark: #584f44;
+    --dark-light: #B0A695;
+    --light-dark: #EBE3D5;
+    --light: #F3EEEA;
+}
+
+body {
+    background-color: var(--light-dark);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 20px;
+}
+
+.headerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.courseHeader {
+    color: var(--dark);
+}
+
+.coursesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.courseItem {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border: 1px solid var(--dark);
+    background-color: var(--dark-light);
+    color: var(--light);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.courseItemHeader {
+    font-size: 20px;
+    margin: 3px;
+}
+
+.courseItemPrice {
+    font-size: 14px;
+    margin: 5px;
+    color: var(--dark);
+}
+
+.deleteButton {
+    background-color: var(--dark);
+    color: var(--light);
+    font-size: 16px;
+    border-radius: 20px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid var(--dark);
+    padding: 10px;
+    transition: 100ms ease-in;
+}
+
+.deleteButton:hover {
+    transform: scale(1.05);
+}

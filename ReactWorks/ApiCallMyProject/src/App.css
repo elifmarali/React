@@ -1,0 +1,25 @@
+.App {
+  margin: 10px;
+}
+
+.searchDiv {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.searchDiv form {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.imageContainer {
+  columns: 250px 5;
+  column-gap: 10px;
+}
+
+.imageItem {
+  width: 100%;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,34 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "courseName": "Angular",
+      "coursePrice": "69 TL",
+      "courseDescription": "Muhtesem Angular Kursu lorem ipsum dolor sit amet, consectetur adip occurence velit vel metus et ultrices posuere cubilia Cur et ante. Cum sociis natoque penatibus et justo consequ vel met tellus. Cum sociis natoque penatibus et justo consequ vel met tellus "
+    },
+    {
+      "id": 2,
+      "courseName": "Bootstrap",
+      "coursePrice": "29 TL",
+      "courseDescription": "Muhtesem Bootstrap Kursu lorem ipsum dolor sit amet, consectetur adip occurence velit vel metus et ultrices posuere cubilia Cur et ante. Cum sociis natoque penatibus et justo consequ vel met tellus. Cum sociis natoque penatibus et justo consequ vel met tellus "
+    },
+    {
+      "id": 3,
+      "courseName": "C Programlama",
+      "coursePrice": "89 TL",
+      "courseDescription": "Muhtesem C Programlama Kursu lorem ipsum dolor sit amet, consectetur adip occurence velit vel metus et ultrices posuere cubilia Cur et ante. Cum sociis natoque penatibus et justo consequ vel met tellus. Cum sociis natoque penatibus et justo consequ vel met tellus "
+    },
+    {
+      "id": 4,
+      "courseName": "Frontend",
+      "coursePrice": "79 TL",
+      "courseDescription": "Muhtesem Frontend Kursu lorem ipsum dolor sit amet, consectetur adip occurence velit vel metus et ultrices posuere cubilia Cur et ante. Cum sociis natoque penatibus et justo consequ vel met tellus. Cum sociis natoque penatibus et justo consequ vel met tellus "
+    },
+    {
+      "id": 5,
+      "courseName": "HTML",
+      "coursePrice": "0 TL",
+      "courseDescription": "Muhtesem HTML Kursu lorem ipsum dolor sit amet, consectetur adip occurence velit vel metus et ultrices posuere cubilia Cur et ante. Cum sociis natoque penatibus et justo consequ vel met tellus. Cum sociis natoque penatibus et justo consequ vel met tellus "
+    }
+  ]
+}

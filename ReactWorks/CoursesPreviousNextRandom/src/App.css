@@ -1,0 +1,35 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.courseContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.courseItemContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.courseItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+}
+
+button {
+    height: 20px;
+}

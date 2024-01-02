@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,300&display=swap');
+
+body {
+    background-color: #f2f3f5;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.createContainer {
+    width: 450px;
+}
+
+.updateContainer {
+    width: 100%;
+}
+
+.createFormContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.createLabel {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.createInput {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.createButton {
+    border: 1px solid #0149b0;
+    background-color: #0149b0;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: 200ms all;
+    cursor: pointer;
+}
+
+.editButton {
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: 200ms all;
+    cursor: pointer;
+    background-color: #6554c0;
+}
+
+
+.createButton:hover {
+    background-color: #f2f3f5;
+    color: #0149b0;
+    border: 3px solid #0149b0;
+}
+
+.tasksContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.taskItem {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #0149b0;
+    background: #e3e3e3;
+    border-radius: 30px;
+    width: 300px;
+    padding: 30px 10px;
+    margin: 10px;
+    box-shadow: 1px 1px 0px 0px #014ab06d;
+    color: #022556;
+    transition: 200ms all;
+}
+
+.taskItem:hover {
+    transform: scale(1.1);
+}
+
+.taskDescription {
+    margin-bottom: 20px;
+}
+
+.taskItem h3 {
+    font-size: 16px;
+}
+
+.taskItem h4 {
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.taskItem h3,
+h4 {
+    margin: 7px;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+    justify-content: space-between;
+    padding: 0px 50px;
+
+}
+
+.deleteButton {
+    width: 60px;
+    background-color: #f18202;
+    color: #fff;
+    border: 1px solid #f18202;
+    border-radius: 10px;
+    padding: 6px;
+    transition: 300ms all;
+}
+
+.deleteButton:hover {
+    transform: scale(1.1);
+}
+
+.updateButton {
+    width: 100px;
+    background-color: #4fcbdf;
+    border: 1px solid #4fcbdf;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    font-size: 30px;
+    font-weight: 600;
+}
