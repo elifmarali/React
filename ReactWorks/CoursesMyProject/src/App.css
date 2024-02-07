@@ -1,0 +1,95 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-color: #EFECEC;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  color: #0C2D57;
+  overflow-x: hidden;
+  margin: 20px;
+}
+
+.refreshContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  color: #000409;
+  overflow-x: hidden;
+  justify-content: center;
+  width: 100vw;
+}
+
+.refreshText {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.cardsContainer {
+  padding: 10px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.cardContainer {
+  width: 20vw;
+  height: 30vh;
+  border: 3px dotted #FFB0B0;
+  padding: 20px;
+}
+
+.cardTopContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 40px;
+  color: #fa7649;
+}
+
+
+.deleteButton {
+  background-color: #0C2D57;
+  color: #EFECEC;
+  width: 10vw;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: 100ms all;
+  border: none;
+}
+
+.deleteButton:hover {
+  border: 2px solid #fa7649;
+}
+
+.refreshButton {
+  background-color: #fa7649;
+  color: #EFECEC;
+  width: 20vw;
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: 100ms all;
+  border: none;
+  font-size: 18px;
+}
+
+.refreshButton:hover {
+  border: 1px solid #0C2D57;
+}

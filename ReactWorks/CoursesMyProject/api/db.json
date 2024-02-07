@@ -1,0 +1,34 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quibusdam delectus amet aliquid officiis reprehenderit deleniti, vero quia.",
+      "title": "Angular",
+      "price": 69
+    },
+    {
+      "id": 2,
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quibusdam delectus amet aliquid officiis reprehenderit deleniti, vero quia.",
+      "title": "Bootstrap",
+      "price": 89
+    },
+    {
+      "id": 3,
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quibusdam delectus amet aliquid officiis reprehenderit deleniti, vero quia.",
+      "title": "C Programlama",
+      "price": 99
+    },
+    {
+      "id": 4,
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quibusdam delectus amet aliquid officiis reprehenderit deleniti, vero quia.",
+      "title": "Frontend Kursu",
+      "price": 119
+    },
+    {
+      "id": 5,
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quibusdam delectus amet aliquid officiis reprehenderit deleniti, vero quia.",
+      "title": "HTML",
+      "price": 0
+    }
+  ]
+}
