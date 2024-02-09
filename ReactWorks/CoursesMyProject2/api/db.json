@@ -1,0 +1,34 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "content": "Angular (genellikle Angular 2+ veya Angular CLI olarak anılır),[1][2] Google'daki Angular Ekibi, bireyler ve şirketler topluluğu tarafından yönetilen TypeScript tabanlı özgür ve açık kaynaklı bir web uygulaması çerçevesidir. Angular, AngularJS'yi oluşturan aynı ekibin eksiksiz bir yeniden yazma işlemidir. Angular, MongoDB veritabanı, Express.js web uygulaması sunucusu çerçevesi, Angular'ın kendisi (veya AngularJS) ve Node.js çalışma ortamından oluşan MEAN yığınının ön ucu olarak kullanılır.",
+      "title": "Angular",
+      "price": 69
+    },
+    {
+      "id": 2,
+      "content": "Bootstrap, HTML, CSS ve JavaScript kullanılarak yazılmış, açık kaynaklı ve ücretsiz bir front-end kütüphanesidir. Eski Twitter çalışanları Mark Otto ve Jacob Thornton tarafından oluşturulan bu kütüphane, geliştiricilere duyarlı web siteleri oluşturabilme imkanı sağlar. Bootstrap'in sunduğu tasarım şablonları, tipografi, formlar, butonlar ve navigasyon gibi arayüz bileşenleri oluşturmakta kullanılabilmektedir. Bu sayede geliştiriciler, estetik konularla uğraşmadan uygulama geliştirirken, tasarımcılar için de çekici temalar oluşturma konusunda güçlü bir temel sunmaktadır.",
+      "title": "Bootstrap",
+      "price": 89
+    },
+    {
+      "id": 3,
+      "content": "C'nin ilk gelişme safhaları 1969 ile 1974 arasında AT&T Bell Laboratuvarları'nda gerçekleşti. Ritchie'ye göre, en yaratıcı devre 1972 idi. Dilin pek çok özelliği B adlı bir dilden türediği için, yeni dile C adı verildi. B dili yorumlanan bir dildi ve veri tipi desteği yoktu. Yeni donanımların farklı veri tiplerini desteklemesi ve yorumlanan dillerin çalışma zamanında görece yavaş olması sebebi ile C dili tip desteği eklenmiş ve derlenen B olarak geliştirildi.",
+      "title": "C Programlama",
+      "price": 99
+    },
+    {
+      "id": 4,
+      "content": "Frontend genellikle web tasarımı ve web'in ön yüzünün geliştirilmesini kapsar. Web tasarımı dendiğinde; Adobe XD, Photoshop ve Sketch gibi tasarım programlarını kullanabilen, aynı zamanda da HTML, CSS, JavaScript ve JQuery ile kod yazabilen tasarımcılardan bahsedilir. Bir web sitesini kullanırken gördüğünüz her şey; HTML, CSS ve JavaScript'in, kullandığınız web tarayıcı tarafından kontrol edilmesidir. Bunun içinde de fontlar, açılır menüler, geçişler, sliderlar, iletişim formları vb. tasarımsal işler yer alır.",
+      "title": "Frontend Kursu",
+      "price": 119
+    },
+    {
+      "id": 5,
+      "content": "HTML, bir programlama dili olarak tanımlanamaz. Zira HTML kodlarıyla kendi başına çalışan bir program yazılamaz. Ancak bu dili yorumlayabilen programlar aracılığıyla çalışabilen programlar yazılabilir. Programlama dili denilememesinin nedeni tam olarak budur. Temel gereği yazı, görüntü, video gibi değişik verileri ve bunları içeren sayfaları birbirine basitçe bağlamak, buna ek olarak söz konusu sayfaların web tarayıcısı yazılımları tarafından düzgün olarak görüntülenmesi için gerekli kuralları belirlemektir. HTML kodunu web tarayıcıları okur, yorumlar ve görsel hale dönüştürürler, dolayısıyla aynı HTML kodunun farklı tarayıcılarda farklı sonuç vermesi olasıdır. CSS ve JavaScript ile beraber kullanıldığında HTML vasıtasıyla görsel ve dinamik web siteleri yaratılabilir.",
+      "title": "HTML",
+      "price": 0
+    }
+  ]
+}
