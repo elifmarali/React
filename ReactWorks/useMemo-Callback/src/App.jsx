@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import "./App.css";
 import { useMemo } from "react";
+import NumberList from "./NumberList";
 
 function App() {
   const [number, setNumber] = useState(0);
+  const [number2, setNumber2] = useState(1);
   const [dark, setDark] = useState(false);
   const doubleNumber = useMemo(() => {
     return slowFunc(number);
@@ -15,6 +17,10 @@ function App() {
     backgroundColor: dark ? "#000" : "#fff",
     color: dark ? "#fff" : "#000",
   };
+
+  const getItems = useCallback(() => {
+    return [number2, number2 + 1, number2 + 2];
+  }, [number2]);
   return (
     <>
       <input
@@ -25,6 +31,8 @@ function App() {
       />
       <button onClick={handleClickTheme}>Temayi Degistir</button>
       <div style={theme}>{doubleNumber}</div>
+      <h3>Number Items</h3>
+      <NumberList getItems={getItems}></NumberList>
     </>
   );
 }
