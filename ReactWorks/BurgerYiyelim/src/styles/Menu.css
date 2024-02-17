@@ -1,0 +1,52 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuTitle {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.burgerCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px 70px;
+}
+
+.burgerCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    height: 48vh;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+.burgerImage {
+    width: 18vw;
+    margin: 10px 0;
+}
+
+.burgerTitle {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.burgerPrice {
+    color: brown;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px 0;
+}
