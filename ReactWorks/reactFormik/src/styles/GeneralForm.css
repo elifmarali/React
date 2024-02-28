@@ -1,0 +1,57 @@
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.formItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px 0;
+    width: 35vw;
+}
+
+.formItem label {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.formItem input {
+    height: 20px;
+    border: 0.4px solid lightgray;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #2d3648;
+    color: white;
+}
+
+.formItem input.errorInput {
+    border: 1px solid #fc8181;
+}
+
+.formItem input::placeholder {
+    color: #b5c0cd
+}
+
+.saveButton {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    width: 35vw;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+}
+
+.errorText {
+    color: #fc8181;
+    font-size: 14px;
+    font-weight: 600;
+}
