@@ -436,3 +436,168 @@ console.log(Circle.pi);
 console.log(data.a);
 console.log(data2.a);
 console.log(Circle.calculateArea(5)); */
+
+//! Abstract Class
+/* abstract class Department {
+  constructor(public name: string) {}
+  abstract printMeeting(): void;
+
+  printName(): void {
+    console.log("Name is: " + this.name);
+  }
+
+  abstract generateReport(): void;
+}
+
+class AccountingDepartment extends Department {
+  constructor() {
+    super("Accounting and Auditing");
+  }
+  printMeeting(): void {
+    console.log("The Accounting Department meets each Monday at 10.00am");
+  }
+  generateReport(): void {
+    console.log("Generating accounting reports...");
+  }
+}
+let department: Department;
+department = new AccountingDepartment();
+// let department = new AccountingDepartment();
+department.printMeeting();
+department.printName();
+department.generateReport();
+ */
+
+//! interface nedir nasil kullanilir
+//? TypeScript'deki interface, temelinde bir tip tanımından başka birşey değildir.
+//? class ve function'lar nesnelerin davranışlarını tanımlarken, interface'ler nesnelerin tiplerini
+//? tanımlar şeklinde düşünebiliriz.
+
+/* interface Person {
+  readonly firstName: string;
+  lastName: string;
+  middleName?: string; // optional parameters
+}
+function getFullName(person: Person) {
+  if (person.middleName) {
+    return `${person.firstName} ${person.middleName} ${person.lastName}`;
+  } else {
+    return `${person.firstName} ${person.lastName}`;
+  }
+}
+
+let person: Person = {
+  firstName: "Elif",
+  middleName: "2ELif",
+  lastName: "Marali",
+};
+//readonly oldugunda deger daha sonrasinda degistirilemez
+// person.firstName = "3Elif";
+console.log(getFullName(person));
+ */
+
+//! interface funtion type
+/* interface StringFormat {
+  (str: string, isUpper: boolean);
+}
+
+let format: StringFormat;
+
+format = function (str: string, isUpper: boolean) {
+  return isUpper ? str.toLocaleUpperCase() : str.toLocaleLowerCase();
+};
+
+console.log(format("Elif Marali", true));
+ */
+
+//! interface extend etme
+/* interface IPerson {
+  name: string;
+  gender: string;
+}
+
+interface IEmployee extends IPerson {
+  empNumber: number;
+}
+
+interface IDepartment extends IPerson {
+  empDepartment: string;
+}
+
+let employee: IEmployee = {
+  name: "Elif",
+  gender: "Female",
+  empNumber: 2529,
+};
+
+let employeeWorker: IDepartment = {
+  empDepartment: "Software Engineer",
+  name: "Elif",
+  gender: "Female",
+};
+
+console.log(employee);
+console.log(employeeWorker); */
+
+//! bir classa interface implemente etme
+
+/* interface IPerson {
+  name: string;
+  gender: string;
+}
+
+//class ile implemente isleminde extendsin yani sira interface icindeki paramaetreler tekrar yazilmalidir
+class Employee implements IPerson {
+  empNumber: number;
+  name: string;
+  gender: string;
+  constructor(empNumber: number, name: string, gender: string) {
+    this.empNumber = empNumber;
+    this.name = name;
+    this.gender = gender;
+  }
+}
+
+let employee = new Employee(25, "Elif", "Female");
+console.log(employee);
+ */
+
+//! Type intersection
+//interfaceleri birlestirip icerisindeki propertyleri kullanmaak istedigimizde kullaniriz
+// & ile interfaceleri birlestiririz
+/* 
+interface BussinessPartner {
+  name: string;
+  credit: number;
+}
+
+interface Identity {
+  id: number;
+  name: string;
+}
+
+interface Contact {
+  email: string;
+  phone: string;
+}
+
+type Employee = Identity & Contact;
+
+let person1: Employee = {
+  id: 3,
+  name: "Elif",
+  email: "elif@gmail.com",
+  phone: "013122342",
+};
+console.log(person1);
+
+type Employee2 = BussinessPartner & Contact;
+let person2: Employee2 = {
+  name: "Elif",
+  credit: 2,
+  email: "elif@gmail.com",
+  phone: "01312",
+};
+console.log(person2); */
+
+//! type guard
