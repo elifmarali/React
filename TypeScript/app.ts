@@ -601,3 +601,122 @@ let person2: Employee2 = {
 console.log(person2); */
 
 //! type guard
+
+/* type tip = string | number;
+
+function add(a: tip, b: tip) {
+  if (typeof a === "string" && typeof b === "string") {
+    return a.concat(b);
+  } else if (typeof a === "number" && typeof b === "number") {
+    return a + b;
+  }
+  throw new Error("invalid type");
+}
+
+console.log(add(5, 6));
+console.log(add("Elif", "marali"));
+console.log(add("Elif", 3));
+ */
+
+//! Generics
+/* function getRandomNumber(items: number[]): number {
+  let randomIndex = Math.floor(Math.random() * items.length);
+  return items[randomIndex];
+}
+
+var numbers: number[] = [13, 15, 17, 19, 21];
+console.log(getRandomNumber(numbers));
+
+function getRandomString(items: string[]): string {
+  let randomIndex = Math.floor(Math.random() * items.length);
+  return items[randomIndex];
+}
+
+var names = ["Elif", "Yunus", "Emre"];
+console.log(getRandomString(names));
+
+function getRandomElement<T>(items: T[]): T {
+  let randomIndex = Math.floor(Math.random() * items.length);
+  return items[randomIndex];
+}
+var booleans = [
+  true,
+  false,
+  true,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+];
+console.log(getRandomElement<string>(names));
+console.log(getRandomElement<number>(numbers));
+console.log(getRandomElement<boolean>(booleans));
+ */
+
+//! Generic constraints
+/* function merge<U extends object, V extends object>(obj1: U, obj2: V) {
+  return {
+    ...obj1,
+    ...obj2,
+  };
+}
+
+var person = merge({ name: "Elif" }, { age: 22 });
+console.log(person);
+ */
+
+//! interface generic
+/* interface Months<U, V> {
+  key: U;
+  value: V;
+}
+
+var month: Months<number, string> = {
+  key: 1,
+  value: "January",
+};
+console.log(month); */
+
+//! class generic
+class Stack<T> {
+  private elements: T[] = [];
+  constructor(private size: number) {}
+  isEmpty(): boolean {
+    return this.elements.length === 0;
+  }
+  isFull(): boolean {
+    return this.elements.length === this.size;
+  }
+  push(element: T): void {
+    if (this.elements.length === this.size) {
+      throw new Error("The stack is overflow");
+    }
+    this.elements.push(element);
+  }
+  pop(): any {
+    if (this.elements.length === 0) {
+      throw new Error("The stack is empty");
+    }
+    return this.elements.pop();
+  }
+}
+
+function randomBeetween(low: number, high: number): number {
+  return Math.floor(Math.random() * (high - low + 1) + low);
+}
+
+var numbers = new Stack<number>(5);
+console.log(numbers);
+while (!numbers.isFull()) {
+  let n = randomBeetween(1, 10);
+  console.log(`Push ${n} into the stack`);
+  numbers.push(n);
+}
+
+while (!numbers.isEmpty()) {
+  let n = numbers.pop();
+  console.log(`Pop ${n} from the stack`);
+}
