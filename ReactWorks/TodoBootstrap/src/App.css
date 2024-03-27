@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #eff0f1;
+
+}
+
+header {
+    background-color: #aeb6b8;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid #3d4144;
+}
+
+header h2 {
+    display: flex;
+    gap: 0 10px;
+    color: #fff;
+    font-size: 40px;
+    border-radius: 2px;
+}
+
+.formArea {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 10px;
+    border: 2px dotted #ced3d4;
+    width: 30vw;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+form input,
+form textarea {
+    width: 30vw;
+    border: none;
+    padding: 10px;
+}
+
+.addButton {
+    background-color: #0099DD;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    font-size: 15px;
+    border-radius: 20px;
+    width: 31.5vw;
+}
+
+.taskContainer {
+    display: flex;
+    margin: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.taskItem {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #3d4144;
+    width: 26vw;
+    padding: 20px;
+    min-width: 20vw;
+    gap: 10px;
+    border-radius: 20px;
+}
+
+.taskItem h6 {
+    color: #20b3f2;
+    font-size: 20px;
+}
+
+.deleteButton {
+    background-color: #dd0000;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    font-size: 15px;
+    border-radius: 20px;
+}
+
+footer {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
