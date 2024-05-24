@@ -1,0 +1,71 @@
+{
+  "users": [
+    {
+      "name": "xxx",
+      "id": 3
+    },
+    {
+      "name": "Jack Daniel",
+      "id": 6
+    }
+  ],
+  "albums": [
+    {
+      "userId": 3,
+      "title": "XXX Sehir",
+      "id": 15
+    },
+    {
+      "userId": 3,
+      "title": "Ergonomic Bronze Car",
+      "id": 16
+    },
+    {
+      "userId": 6,
+      "title": "Luxurious Plastic Computer",
+      "id": 19
+    },
+    {
+      "userId": 3,
+      "title": "Incredible Metal Shoes",
+      "id": 21
+    },
+    {
+      "userId": 3,
+      "title": "Electronic Bronze Chicken",
+      "id": 23
+    }
+  ],
+  "photos": [
+    {
+      "albumId": 15,
+      "url": "https://loremflickr.com/200/200/abstract",
+      "id": 4
+    },
+    {
+      "albumId": 15,
+      "url": "https://loremflickr.com/200/200/abstract",
+      "id": 5
+    },
+    {
+      "albumId": 15,
+      "url": "https://loremflickr.com/200/200/abstract",
+      "id": 6
+    },
+    {
+      "albumId": 16,
+      "url": "https://loremflickr.com/200/200/abstract",
+      "id": 7
+    },
+    {
+      "albumId": 23,
+      "url": "https://loremflickr.com/200/200/abstract",
+      "id": 8
+    },
+    {
+      "albumId": 15,
+      "url": "https://loremflickr.com/200/200/abstract",
+      "id": 9
+    }
+  ]
+}

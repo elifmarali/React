@@ -1,0 +1,82 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px;
+}
+
+.panelDiv {
+    background-color: lightgray;
+    border-radius: 30px;
+}
+
+.topContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+    align-items: center;
+}
+
+.betweenContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 14px;
+}
+
+.aroundContainer {
+    display: flex;
+    gap: 60px;
+}
+
+.buttons {
+    border: none;
+    background-color: lightgray;
+    font-size: 14px;
+}
+
+.albumContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.albumContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.photosContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+
+}
+
+.photoContainer {
+    position: relative;
+}
+
+.photo {
+    border-radius: 20px;
+    margin: 4px;
+    position: relative;
+}
+
+.photoContainer:hover .photo {
+    opacity: 0.6;
+}
+
+.photoContainer:hover .deletePhotoIcon {
+    opacity: 1;
+}
+
+.deletePhotoIcon {
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: aliceblue;
+    font-size: 20px;
+}
