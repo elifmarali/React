@@ -6,8 +6,8 @@ import Todo from './components/Todo/Todo';
 function App() {
   return (
     <div className="App">
-      {/* <Counter></Counter>
-      <div>Learn React</div> */}
+      <Counter></Counter>
+      <div>Learn React</div>
       <Todo></Todo>
     </div>
   );
