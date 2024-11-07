@@ -12,12 +12,12 @@ import {
   Typography,
 } from "@mui/material";
 import HttpsOutlinedIcon from "@mui/icons-material/HttpsOutlined";
-const Login = () => {
+const Login = ({ setTab }) => {
   const paperStyle = {
     padding: 20,
     height: "44vh",
     width: 320,
-    margin: "20px auto",
+    // margin: "20px auto",
   };
   const avatarStyle = {
     backgroundColor: "#1bbd7e",
@@ -77,7 +77,13 @@ const Login = () => {
             alignItems="center"
           >
             <Typography>Do you have an account?</Typography>
-            <Link href="#" underline="hover">
+            <Link
+              href="#"
+              underline="hover"
+              onClick={() => {
+                setTab("register");
+              }}
+            >
               Sign Up
             </Link>
           </Grid>
