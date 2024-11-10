@@ -40,6 +40,10 @@ function App() {
       .oneOf([true])
       .required("Adres alanı boş bırakılamaz..."),
   });
+
+  const onSubmit = (data) => {
+    console.log(data);
+  };
   return (
     <Grid
       container
@@ -94,10 +98,6 @@ function App() {
             agree: false,
           }}
           validationSchema={SignupValidation}
-          onSubmit={(values) => {
-            console.log("abcs");
-            console.log("Form Values:", JSON.stringify(values, null, 2));
-          }}
         >
           {({
             values,
@@ -109,9 +109,15 @@ function App() {
             isSubmitting,
           }) => {
             return (
-              <Form onSubmit={handleSubmit}>
+              <Form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  onSubmit(values);
+                }}
+              >
                 <FormControl>
-                  <TextField
+                  <Field
+                    as={TextField}
                     label="İsim"
                     name="name"
                     size="small"

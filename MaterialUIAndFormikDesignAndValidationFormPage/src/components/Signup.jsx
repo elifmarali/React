@@ -3,6 +3,7 @@ import {
   Avatar,
   Button,
   Checkbox,
+  FormHelperText,
   Grid,
   Paper,
   Stack,
@@ -23,7 +24,7 @@ function Signup() {
     name: "",
     email: "",
     phoneNumber: "",
-    gender: "female",
+    gender: "",
     password: "",
     confirmPassword: "",
     termsAndConditions: false,
@@ -48,7 +49,9 @@ function Signup() {
       .required("Required")
       .max(11, "Must be 11 characters or less")
       .min(10, "Must be 10 characters or more"),
-    gender: Yup.string().required("Required"),
+    gender: Yup.string()
+      .oneOf(["female", "male"], "Required...")
+      .required("Required..."),
     password: Yup.string()
       .min(8, "Password must be 8 characters long")
       .matches(/[0-9]/, "Password requires a number")
@@ -64,9 +67,14 @@ function Signup() {
       .required("Required"),
   });
 
-  const onSubmit = (values, props) => {
-    console.log(values);
+  const onSubmit = (values, formikBag) => {
+    console.log("values : ", values);
+    setTimeout(() => {
+      formikBag.resetForm();
+      formikBag.setSubmitting(false);
+    }, 2000);
   };
+
   return (
     <>
       <Grid>
@@ -85,7 +93,7 @@ function Signup() {
             onSubmit={onSubmit}
             validationSchema={validationSchema}
           >
-            {({ errors, values, touched }) => (
+            {({ errors, values, touched, handleSubmit }) => (
               <Form>
                 <Stack spacing={2}>
                   <Field
@@ -113,7 +121,7 @@ function Signup() {
                     helperText={errors.email && touched.email && errors.email}
                     error={errors.email && touched.email}
                   />
-                  <FormControl>
+                  <FormControl error={errors.gender}>
                     <FormLabel id="demo-radio-buttons-group-label">
                       Gender
                     </FormLabel>
@@ -123,15 +131,13 @@ function Signup() {
                       aria-labelledby="demo-radio-buttons-group-label"
                       defaultValue="female"
                       style={{ display: "inline" }}
-                      helperText={
-                        errors.gender && touched.gender && errors.gender
-                      }
-                      error={errors.gender && touched.gender}
+                      error={errors.gender}
                     >
                       <FormControlLabel
                         value="female"
                         control={<Radio />}
                         label="Female"
+                        error={errors.gender}
                       />
                       <FormControlLabel
                         value="male"
@@ -140,6 +146,13 @@ function Signup() {
                       />
                     </Field>
                   </FormControl>
+                  <FormHelperText>
+                    <ErrorMessage
+                      name="gender"
+                      className="errorMessage"
+                      component={Typography}
+                    />
+                  </FormHelperText>
                   <Field
                     as={TextField}
                     name="phoneNumber"
@@ -155,6 +168,7 @@ function Signup() {
                     error={errors.phoneNumber && touched.phoneNumber}
                   />
                   <Field
+                    type="password"
                     as={TextField}
                     name="password"
                     label="Password"
@@ -167,6 +181,7 @@ function Signup() {
                     }
                   />
                   <Field
+                    type="password"
                     as={TextField}
                     name="confirmPassword"
                     label="Confirm Password"
